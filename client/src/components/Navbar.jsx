@@ -52,10 +52,7 @@ function Navbar(props) {
                 </nav>
                 </header>
 
-                <Routes>
-                    <Route path='/' element={<Home />} />
-                    
-                </Routes>
+                
             </Router>
         </div>
     )

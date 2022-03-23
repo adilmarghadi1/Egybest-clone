@@ -1,0 +1,49 @@
+.container1 {
+    padding-top: 90px !important;
+    width: 88%;
+    margin:10px auto;
+    display: grid;
+    grid-template-columns: 0.6fr 1fr 0.6fr;
+}
+
+.box1 {
+    position: relative;
+    display: block;
+    margin-bottom: 10px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 300px;
+    height: 133px;
+    padding-top: 10px;
+}
+
+.box1 h1 {
+    text-align: center;
+    font-size: 16px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+
+    color: rgb(46, 45, 45);
+
+}
+
+.links {
+    display: flex;
+    margin-top: 13px;
+    justify-content: center;
+}
+
+.links a {
+    text-decoration: none;
+    color: #06c;
+    font-weight: 600;
+}
+
+.linksf {
+    font-size: 1.5em;
+    margin-bottom: -5px;
+    border-radius: 4px;
+    margin-left: 7px;
+    color:#3c5a98;
+}
