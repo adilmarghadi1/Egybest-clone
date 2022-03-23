@@ -17,7 +17,7 @@ function Navbar(props) {
                 <ul className={click ? "nav-menu active" : "nav-menu"}>
                          
                          <div className='left'>
-
+                         <BsSearch className='search2'/>
                              <li className='nav-item'>
                                  <Link to='/' className='nav-link first' onClick={handleClick}>تسجيل الدخول</Link>
                              </li>

@@ -98,3 +98,56 @@
 .logo {
     margin-top: -2px;
 }
+
+.search2{
+    display: none;
+}
+@media screen and (max-width:1000px) {
+    .navbar {
+        width: 96%;
+    }
+}
+ 
+
+@media screen and (max-width:790px) {
+    .first {
+    margin-right: 12px;
+
+    }
+}
+
+@media screen and (max-width:712px) {
+    .in {
+       display: none;
+
+    }
+
+    .search2 {
+        display: block;
+        font-size: 21px;
+        margin-right: 20px;
+        margin-left: 15px;
+        cursor: pointer;
+    }
+}
+
+@media screen and (max-width:465px) {
+    .second {
+       display: none;
+
+    }
+}
+@media screen and (max-width:420px) {
+    .second {
+       display: none;
+
+    }
+}
+
+@media screen and (max-width:333px) {
+    .search2 {
+        margin-left: 9px;
+        margin-right: 10px;
+
+    }
+}
