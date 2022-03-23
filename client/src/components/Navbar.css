@@ -102,13 +102,26 @@
 .search2{
     display: none;
 }
+.search-click {
+    display: none;
+}
+ 
+  
 @media screen and (max-width:1000px) {
     .navbar {
         width: 96%;
     }
 }
  
+.first:hover {
+    opacity: 0.7;
+    transition: all 0.2s ease-in;
+}
 
+.second:hover {
+    opacity: 0.7;
+    transition: all 0.2s ease-in;
+}
 @media screen and (max-width:790px) {
     .first {
     margin-right: 12px;
@@ -124,14 +137,55 @@
 
     .search2 {
         display: block;
-        font-size: 21px;
+        font-size: 15px;
         margin-right: 20px;
-        margin-left: 15px;
+        margin-left: 10px;
         cursor: pointer;
+        margin-right: -10px;
+        z-index: 100;
+        position: fixed;
+        margin-top: 4px;
+        
     }
+
+    .search-click {
+        display: block;
+        width: 100px;
+        height: 40px !important;
+        padding: 15px;
+        margin-top: -9px;
+        transition: all 0.01s;
+        z-index: 1;
+        padding-left: 30px;
+        border: solid 1px #bbb;
+
+        margin-right: 5px;
+    }
+      .search-click:focus {
+        width: 310px;
+        padding-left: 30px;
+        position: fixed;
+      }
+      .search-click {
+        position: relative;
+        overflow: hidden;
+        height: 30px;
+      }
+      .search-click input {
+        background: transparent;
+        border: solid 1px #bbb;
+
+        outline: none;
+        position: absolute;
+        z-index: 300;
+        width: 300px;
+        height: 50px;
+        left: 0%;
+        padding: 10px;
+      }
 }
 
-@media screen and (max-width:465px) {
+@media screen and (max-width:514px) {
     .second {
        display: none;
 
@@ -149,5 +203,16 @@
         margin-left: 9px;
         margin-right: 10px;
 
+    }
+}
+
+
+@media screen and (max-width:383px) {
+    .first {
+       display: none;
+
+    }
+    .search-click { 
+        width: 140px;
     }
 }
