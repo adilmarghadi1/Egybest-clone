@@ -211,7 +211,8 @@ function Home() {
                 <div className='box4'>
                     <div className='box44'>
                         <p> » المزيد</p>
-                        <h3>الأفلام الأكثر مشاهدة</h3>
+                        <h3>مسرحيات
+</h3>
                     </div>
                     <Swiper
         slidesPerView={5}
