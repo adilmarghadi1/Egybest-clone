@@ -109,6 +109,7 @@ margin-bottom: 20px;
     border: 1px solid #ddd;
 width: 54vw;
     background-color: white;
+margin-bottom: 20px;
    
 }
 
@@ -178,9 +179,9 @@ width: 54vw;
     width: 170px;
     padding: 0 0 0 10px;
     height: 280px;
-
+    right: 100px;
+    position: fixed;
     background-color: #FFFFFF;
-
  }
 
 .box8 {
@@ -251,5 +252,12 @@ width: 170px;
 
     .box4 {
         width: 94vw;
+    }
+}
+
+@media screen and (max-width:1500px) {
+
+    .right1 {
+        right: 26px;
     }
 }

@@ -14,11 +14,11 @@
     width: 100%;
     border: none;
     box-shadow: 1px 0 2px 1px #ddd;
+    top: 0;
 }
  
 .nav-menu {
     display: flex;
-
 }
 
 .nav-item {

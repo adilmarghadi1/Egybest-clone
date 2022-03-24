@@ -175,7 +175,226 @@ function Home() {
                       
                 </div>
                 
+
+                <div className='box4'>
+                    <div className='box44'>
+                        <p> » المزيد</p>
+                        <h3>الأفلام الأكثر مشاهدة</h3>
+                    </div>
+                    <Swiper
+        slidesPerView={5}
+        spaceBetween={30}
+        slidesPerGroup={3}
+        loop={true}
+        loopFillGroupWithBlank={true}
+        pagination={{
+          clickable: true,
+        }}
+        navigation={true}
+        modules={[Pagination, Navigation]}
+        className="mySwiper"
+      >
+        <SwiperSlide>
+            <div className='box5'>
+            <img src={img1} className='img1' alt='image' />
+            <p>Titanic</p>
             </div>
+        </SwiperSlide>
+
+       <SwiperSlide>
+            <div className='box5'>
+            <img src={img1} className='img1' alt='image' />
+            <p>Titanic</p>
+            </div>
+        </SwiperSlide>
+
+       <SwiperSlide>
+            <div className='box5'>
+            <img src={img1} className='img1' alt='image' />
+            <p>Titanic</p>
+            </div>
+        </SwiperSlide>
+
+         <SwiperSlide>
+            <div className='box5'>
+            <img src={img1} className='img1' alt='image' />
+            <p>Titanic</p>
+            </div>
+        </SwiperSlide>
+
+         <SwiperSlide>
+            <div className='box5'>
+            <img src={img1} className='img1' alt='image' />
+            <p>Titanic</p>
+            </div>
+        </SwiperSlide>
+
+          <SwiperSlide>
+            <div className='box5'>
+            <img src={img1} className='img1' alt='image' />
+            <p>Titanic</p>
+            </div>
+
+        </SwiperSlide>
+         <SwiperSlide>
+            <div className='box5'>
+            <img src={img1} className='img1' alt='image' />
+            <p>Titanic</p>
+            </div>
+        </SwiperSlide>
+      </Swiper>
+                    
+                      
+                </div>
+
+
+                <div className='box4'>
+                    <div className='box44'>
+                        <p> » المزيد</p>
+                        <h3>أفلام جديدة
+</h3>
+                    </div>
+                    <Swiper
+        slidesPerView={5}
+        spaceBetween={30}
+        slidesPerGroup={3}
+        loop={true}
+        loopFillGroupWithBlank={true}
+        pagination={{
+          clickable: true,
+        }}
+        navigation={true}
+        modules={[Pagination, Navigation]}
+        className="mySwiper"
+      >
+        <SwiperSlide>
+            <div className='box5'>
+            <img src={img1} className='img1' alt='image' />
+            <p>Titanic</p>
+            </div>
+        </SwiperSlide>
+
+       <SwiperSlide>
+            <div className='box5'>
+            <img src={img1} className='img1' alt='image' />
+            <p>Titanic</p>
+            </div>
+        </SwiperSlide>
+
+       <SwiperSlide>
+            <div className='box5'>
+            <img src={img1} className='img1' alt='image' />
+            <p>Titanic</p>
+            </div>
+        </SwiperSlide>
+
+         <SwiperSlide>
+            <div className='box5'>
+            <img src={img1} className='img1' alt='image' />
+            <p>Titanic</p>
+            </div>
+        </SwiperSlide>
+
+         <SwiperSlide>
+            <div className='box5'>
+            <img src={img1} className='img1' alt='image' />
+            <p>Titanic</p>
+            </div>
+        </SwiperSlide>
+
+          <SwiperSlide>
+            <div className='box5'>
+            <img src={img1} className='img1' alt='image' />
+            <p>Titanic</p>
+            </div>
+
+        </SwiperSlide>
+         <SwiperSlide>
+            <div className='box5'>
+            <img src={img1} className='img1' alt='image' />
+            <p>Titanic</p>
+            </div>
+        </SwiperSlide>
+      </Swiper>
+                    
+                      
+                </div>
+
+
+
+                <div className='box4'>
+                    <div className='box44'>
+                        <p> » المزيد</p>
+                        <h3>أفلام عن الحرب العالمية ☢</h3>
+                    </div>
+                    <Swiper
+        slidesPerView={5}
+        spaceBetween={30}
+        slidesPerGroup={3}
+        loop={true}
+        loopFillGroupWithBlank={true}
+        pagination={{
+          clickable: true,
+        }}
+        navigation={true}
+        modules={[Pagination, Navigation]}
+        className="mySwiper"
+      >
+        <SwiperSlide>
+            <div className='box5'>
+            <img src={img1} className='img1' alt='image' />
+            <p>Titanic</p>
+            </div>
+        </SwiperSlide>
+
+       <SwiperSlide>
+            <div className='box5'>
+            <img src={img1} className='img1' alt='image' />
+            <p>Titanic</p>
+            </div>
+        </SwiperSlide>
+
+       <SwiperSlide>
+            <div className='box5'>
+            <img src={img1} className='img1' alt='image' />
+            <p>Titanic</p>
+            </div>
+        </SwiperSlide>
+
+         <SwiperSlide>
+            <div className='box5'>
+            <img src={img1} className='img1' alt='image' />
+            <p>Titanic</p>
+            </div>
+        </SwiperSlide>
+
+         <SwiperSlide>
+            <div className='box5'>
+            <img src={img1} className='img1' alt='image' />
+            <p>Titanic</p>
+            </div>
+        </SwiperSlide>
+
+          <SwiperSlide>
+            <div className='box5'>
+            <img src={img1} className='img1' alt='image' />
+            <p>Titanic</p>
+            </div>
+
+        </SwiperSlide>
+         <SwiperSlide>
+            <div className='box5'>
+            <img src={img1} className='img1' alt='image' />
+            <p>Titanic</p>
+            </div>
+        </SwiperSlide>
+      </Swiper>
+                    
+                      
+                </div>
+            </div>
+
+            
 
 
             <div className='right1'>
