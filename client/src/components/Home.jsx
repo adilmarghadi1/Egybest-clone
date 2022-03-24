@@ -182,9 +182,7 @@ function Home() {
                 <div className='box7'>
                     <h2> ايجي بست</h2>
                 </div>
-                <div className='box8'>
-                    sd
-                </div>
+                 
             </div>
             
         </div>
