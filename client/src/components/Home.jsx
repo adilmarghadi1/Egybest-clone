@@ -179,7 +179,12 @@ function Home() {
 
 
             <div className='right1'>
-                <h1>Hello</h1>
+                <div className='box7'>
+                    <h2> ايجي بست</h2>
+                </div>
+                <div className='box8'>
+                    sd
+                </div>
             </div>
             
         </div>
