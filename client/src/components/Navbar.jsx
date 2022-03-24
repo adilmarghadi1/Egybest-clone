@@ -1,34 +1,31 @@
-import React, { useState, useEffect } from 'react'
-import {BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom'
+import React, { useState } from 'react'
+import {BrowserRouter as Router, Link} from 'react-router-dom'
 import egybestlogo from '../images/egybest_logo.png'
 import { FaUserAlt } from 'react-icons/fa';
 import { BsSearch } from "react-icons/bs";
-import Home from './Home'
 import './Navbar.css'
 function Navbar(props) {
-    const [click, setClick] = useState(false)
-    const handleClick = () => setClick(!click)
     return (
         <div>
             <Router>
                 <header className='header1'>
 
                 <nav className='navbar'>
-                <ul className={click ? "nav-menu active" : "nav-menu"}>
+                <ul className="nav-menu">
                          
                          <div className='left'>
                          <BsSearch className='search2 '/>
                          <input type="text" className="search-click" name="" placeholder="search here..." />
                              <li className='nav-item'>
-                                 <Link to='/' className='nav-link first' onClick={handleClick}>تسجيل الدخول</Link>
+                                 <Link to='/login' className='nav-link first' >تسجيل الدخول</Link>
                              </li>
  
                              <li className='nav-item'>
-                                 <Link to='/' className='nav-link second' onClick={handleClick}> اشترك مجاناً <FaUserAlt className='user1'/></Link>
+                                 <Link to='/register' className='nav-link second' > اشترك مجاناً <FaUserAlt className='user1'/></Link>
                              </li>
                          </div>
                 </ul>
-                <ul className={click ? "nav-menu active" : "nav-menu"}>
+                <ul className="nav-menu">
                          
                         
 
@@ -44,11 +41,10 @@ function Navbar(props) {
  
                         </div>
                     </ul>
+                    <Link to="/"> 
                     <img src={egybestlogo} alt="logo" className='logo' />
-
-                    <div className='nav-icon' activeClassName='active' onClick={handleClick}>
-                     <i className={click ? "fas fa-times" : "fas fa-bars"}></i>
-                 </div>
+                    </Link>
+                     
                 </nav>
                 </header>
 

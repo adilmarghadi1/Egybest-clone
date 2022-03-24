@@ -35,7 +35,6 @@ function Home() {
     }
 
     return (
-        
         <div className="container1">
             
             {/* Left  */}

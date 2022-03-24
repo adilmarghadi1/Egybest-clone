@@ -2,7 +2,10 @@ import logo from './logo.svg';
 import './App.css';
 import Navbar from './components/Navbar'
 import Home from './components/Home'
-import {BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom'
+import Login from './components/Login'
+import Register from './components/Register'
+
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 
 function App() {
   return (
@@ -10,7 +13,9 @@ function App() {
       <Navbar />
     <Router>
       <Routes>
-              <Route path='/' element={<Home />} />
+              <Route path='/'  element={<Home />} />
+              <Route path='/login' element={<Login />} />
+              <Route path='/register' element={<Register />} />
         </Routes>
       </Router>
     </div>
