@@ -156,7 +156,21 @@ function Home() {
             <p>Titanic</p>
             </div>
         </SwiperSlide>
+        <SwiperSlide>
+            <div className='box5'>
+            <img src={img1} className='img1' alt='image' />
+            <p>Titanic</p>
+            </div>
+        </SwiperSlide>
 
+        <SwiperSlide>
+            <div className='box5'>
+            <img src={img1} className='img1' alt='image' />
+            <p>Titanic</p>
+            </div>
+        </SwiperSlide>
+
+        
           <SwiperSlide>
             <div className='box5'>
             <img src={img1} className='img1' alt='image' />
@@ -221,7 +235,18 @@ function Home() {
             <p>Titanic</p>
             </div>
         </SwiperSlide>
-
+        <SwiperSlide>
+            <div className='box5'>
+            <img src={img1} className='img1' alt='image' />
+            <p>Titanic</p>
+            </div>
+        </SwiperSlide>
+         <SwiperSlide>
+            <div className='box5'>
+            <img src={img1} className='img1' alt='image' />
+            <p>Titanic</p>
+            </div>
+        </SwiperSlide>
          <SwiperSlide>
             <div className='box5'>
             <img src={img1} className='img1' alt='image' />
@@ -301,7 +326,18 @@ function Home() {
             <p>Titanic</p>
             </div>
         </SwiperSlide>
-
+        <SwiperSlide>
+            <div className='box5'>
+            <img src={img1} className='img1' alt='image' />
+            <p>Titanic</p>
+            </div>
+        </SwiperSlide>
+        <SwiperSlide>
+            <div className='box5'>
+            <img src={img1} className='img1' alt='image' />
+            <p>Titanic</p>
+            </div>
+        </SwiperSlide>
           <SwiperSlide>
             <div className='box5'>
             <img src={img1} className='img1' alt='image' />
@@ -355,6 +391,20 @@ function Home() {
         </SwiperSlide>
 
        <SwiperSlide>
+            <div className='box5'>
+            <img src={img1} className='img1' alt='image' />
+            <p>Titanic</p>
+            </div>
+        </SwiperSlide>
+
+        <SwiperSlide>
+            <div className='box5'>
+            <img src={img1} className='img1' alt='image' />
+            <p>Titanic</p>
+            </div>
+        </SwiperSlide>
+
+        <SwiperSlide>
             <div className='box5'>
             <img src={img1} className='img1' alt='image' />
             <p>Titanic</p>
