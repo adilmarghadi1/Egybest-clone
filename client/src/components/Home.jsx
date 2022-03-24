@@ -1,8 +1,23 @@
 import './Home.css'
 import { AiFillFacebook } from "react-icons/ai";
 import { FaTwitterSquare } from "react-icons/fa";
+import img1 from '../images/img1.jpg'
+import React, { useRef, useState } from "react";
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+
+
+// import required modules
+import { Pagination, Navigation } from "swiper";
+
 function Home() {
     return (
+        
         <div className="container1">
             
             {/* Left  */}
@@ -86,9 +101,87 @@ function Home() {
 
             <div className='center'>
                 <div className='box3'>
-                <h1>مرحباً بكم في موقع ايجي بست الاصلي</h1>
+                    <h1>مرحباً بكم في موقع ايجي بست الاصلي</h1>
                 </div>
+
+                <div className='box4'>
+                    <div className='box44'>
+                        <p> » المزيد</p>
+                        <h3>الأفلام الأكثر مشاهدة</h3>
+                    </div>
+                    <Swiper
+        slidesPerView={5}
+        spaceBetween={30}
+        slidesPerGroup={3}
+        loop={true}
+        loopFillGroupWithBlank={true}
+        pagination={{
+          clickable: true,
+        }}
+        navigation={true}
+        modules={[Pagination, Navigation]}
+        className="mySwiper"
+      >
+        <SwiperSlide>
+            <div className='box5'>
+            <img src={img1} className='img1' alt='image' />
+            <p>Titanic</p>
             </div>
+        </SwiperSlide>
+
+       <SwiperSlide>
+            <div className='box5'>
+            <img src={img1} className='img1' alt='image' />
+            <p>Titanic</p>
+            </div>
+        </SwiperSlide>
+
+       <SwiperSlide>
+            <div className='box5'>
+            <img src={img1} className='img1' alt='image' />
+            <p>Titanic</p>
+            </div>
+        </SwiperSlide>
+
+         <SwiperSlide>
+            <div className='box5'>
+            <img src={img1} className='img1' alt='image' />
+            <p>Titanic</p>
+            </div>
+        </SwiperSlide>
+
+         <SwiperSlide>
+            <div className='box5'>
+            <img src={img1} className='img1' alt='image' />
+            <p>Titanic</p>
+            </div>
+        </SwiperSlide>
+
+          <SwiperSlide>
+            <div className='box5'>
+            <img src={img1} className='img1' alt='image' />
+            <p>Titanic</p>
+            </div>
+
+        </SwiperSlide>
+         <SwiperSlide>
+            <div className='box5'>
+            <img src={img1} className='img1' alt='image' />
+            <p>Titanic</p>
+            </div>
+        </SwiperSlide>
+      </Swiper>
+                    
+                      
+                </div>
+                
+            </div>
+
+
+            <div className='right1'>
+                <h1>Hello</h1>
+            </div>
+            
         </div>
     )
 }

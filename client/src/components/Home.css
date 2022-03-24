@@ -3,11 +3,16 @@
     width: 88%;
     margin:10px auto;
     display: grid;
+    gap:10px;
     grid-template-columns: 0.5fr 1.3fr 0.3fr;
 }
+
+
 body {
     background-color: #ECF0F0;
 }
+
+
 .box1 {
     position: relative;
     display: block;
@@ -81,10 +86,93 @@ body {
 .center {
     display: block;
     width: 100%;
-    background-color: red;
-    margin: 20px auto;
 
 }
 .box3 h1{
+    font-size: 1.9em;
+    margin-block-start: 0.67em;
+    margin-block-end: 0.67em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    margin-bottom: 30px;
     text-align: center;
 }
+.box44 {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #ddd;
+padding:10px;
+margin-bottom: 20px;
+}
+.box4 {
+    border: 1px solid #ddd;
+width: 54vw;
+    background-color: white;
+   
+}
+
+.box4 h3 {
+    font-size: 1em;
+    color: #222;
+}
+
+
+.box4 p {
+    color:#06c;
+    cursor: pointer;
+}
+
+
+/* Swiper */
+
+.swiper {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+  
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+  }
+  
+  .swiper-slide img {
+    display: block;
+    height: 200px !important;
+    width: 140px;
+    object-fit: cover;
+  }
+  
+
+
+
+ .box5 p {
+     color:#06c;
+     font-size: 17px;
+     display: block;
+     line-height: 20px;
+     margin: 0;
+     margin-top: 8px;
+     margin-bottom: 15px;
+     padding: 0;
+     text-align: center;
+ }
+
+
+ .right1 {
+ }
