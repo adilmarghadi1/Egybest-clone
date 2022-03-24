@@ -217,4 +217,39 @@ width: 170px;
      .container1 {
          width: 99%;
      }
+
+     .box4 {
+    width: 58vw;
+       
+    }
  }
+
+ 
+ @media screen and (max-width:1222px) {
+     
+
+    .box4 {
+   width: 50vw;
+   }
+}
+
+@media screen and (max-width:1035px) {
+    .right1 {
+        display: none;
+    }
+    .box4 {
+        width: 62vw;
+
+}}
+
+
+@media screen and (max-width:870px) {
+
+.box11 {
+    display: none;
+}
+
+    .box4 {
+        width: 94vw;
+    }
+}
