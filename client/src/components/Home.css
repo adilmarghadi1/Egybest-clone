@@ -177,7 +177,7 @@ width: 54vw;
  .right1 {
     width: 170px;
     padding: 0 0 0 10px;
-    height: 200px;
+    height: 280px;
 
     background-color: #FFFFFF;
 
@@ -188,15 +188,26 @@ width: 54vw;
 
 
 }
+ 
  .box7 h2 {
     float: right;
 display: grid;
+width: 170px;
+    text-align: end;
     color: #ff1000;
     font-size: 17px;
+    border-bottom: 2px solid red;
     padding: 7px 11px;
+    margin-bottom: 10px;
     font-weight: 700;
  }
-
- .box7 p {
-
+ 
+ .box7 h3{
+    position: relative;
+    display: block;
+    padding: 10px 11px;
+    font-size: .9em;
+    border-bottom: 1px solid #eee;
+    color:#06c;
+    text-align: end;
  }
