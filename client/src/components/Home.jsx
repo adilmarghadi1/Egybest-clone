@@ -6,7 +6,7 @@ import React, { useRef, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 import { AiFillTwitterSquare } from "react-icons/ai";
-
+import Navbar from './Navbar';
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
@@ -36,7 +36,7 @@ function Home() {
 
     return (
         <div className="container1">
-            
+             
             {/* Left  */}
 
             <div className='left'>
