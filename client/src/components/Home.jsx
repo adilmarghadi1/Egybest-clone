@@ -5,6 +5,7 @@ import img1 from '../images/img1.jpg'
 import React, { useRef, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
+import { AiFillTwitterSquare } from "react-icons/ai";
 
 // Import Swiper styles
 import "swiper/css";
@@ -16,6 +17,23 @@ import "swiper/css/navigation";
 import { Pagination, Navigation } from "swiper";
 
 function Home() {
+    const [movies, setMovies] = useState([]);
+    
+    const searchMovies = async (e) => {
+        e.preventDefault();
+                
+        const url = `https://api.themoviedb.org/3/trending/all/day?api_key=5dcf7f28a88be0edc01bbbde06f024ab`;
+        
+        try {
+            const res = await fetch(url);
+            const data  = await res.json();
+            setMovies(data.results);
+            console.log(data)
+        }catch(err){
+            console.error(err);
+        }
+    }
+
     return (
         
         <div className="container1">
@@ -433,7 +451,7 @@ function Home() {
 
         </SwiperSlide>
          <SwiperSlide>
-            <div className='box5'>
+            <div className='box5' >
             <img src={img1} className='img1' alt='image' />
             <p>Titanic</p>
             </div>
@@ -459,8 +477,9 @@ function Home() {
                 </div>
                  
             </div>
-            
-        </div>
+            <AiFillFacebook className='fb' />
+            <AiFillTwitterSquare className='tw' />
+        </div> 
     )
 }
 

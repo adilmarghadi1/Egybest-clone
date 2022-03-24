@@ -156,12 +156,12 @@ margin-bottom: 20px;
   
   .swiper-slide img {
     display: block;
-    height: 200px !important;
+    height: 200px;
     width: 140px;
     object-fit: cover;
   }
   
-
+ 
 
  
  .box5 p {
@@ -266,4 +266,47 @@ width: 170px;
     .right1 {
         right: 26px;
     }
+}
+
+@media screen and (max-width:730px) {
+    .swiper-slide img {
+        padding-right:75px !important;
+    }
+}
+
+.fb {
+    font-size: 3em;
+    position: fixed;
+    bottom: 200px;
+    right: -6px;
+    color: #3c5a98;
+    cursor: pointer;
+}
+
+.tw {
+    font-size: 3em;
+    position: fixed;
+    bottom: 161px;
+    right: -6px;
+    color: #2daae4;
+    cursor: pointer;
+}
+
+@media screen and (max-width:926px) {
+    .fb, .tw {
+        display: none;
+    }
+}
+.fb:hover {
+    transform: scaleX(1.2);
+    color: #3e434d;
+    transition: all 0.2s ease-in;
+
+}
+
+.tw:hover {
+    transform: scaleX(1.2);
+    color: #8696b6;
+    transition: all 0.2s ease-in;
+
 }
