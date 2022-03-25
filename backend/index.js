@@ -9,6 +9,9 @@ app.use(express.json())
 
 require('dotenv').config()
 
+app.use('/', require('./routes/user'))
+
+
 mongoose.connect(process.env.MONGO_URI,
     err => {
         if(err) throw err
