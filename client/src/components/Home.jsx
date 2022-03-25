@@ -8,10 +8,10 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { AiFillTwitterSquare } from "react-icons/ai";
 import Navbar from './Navbar';
 // Import Swiper styles
+
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-
 
 // import required modules
 import { Pagination, Navigation } from "swiper";
