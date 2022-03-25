@@ -12,6 +12,7 @@ const userSchema = new mongoose.Schema({
     password : {
         type : String
     },
+    Type_Cheked: {type: String, possibleValues: ['Male','Female']}
      
 },
 {

@@ -1,13 +1,55 @@
-import React from "react"
+import React, {useState, useEffect} from "react"
 import { AiOutlineGooglePlus } from "react-icons/ai";
 import { AiFillFacebook } from "react-icons/ai";
 import { FaUserAlt } from "react-icons/fa";
 import { BiMale } from "react-icons/bi";
 import { FaFemale } from "react-icons/fa";
-import { Link} from 'react-router-dom'
+import {BrowserRouter as Router, Routes, Route, Link, useNavigate, Navigate} from 'react-router-dom'
 
+import axios from 'axios'
 import './Register.css'
 function Register() {
+    let navigate = useNavigate();
+
+    const [data, setData] = useState({
+      name: "",
+      email: "",
+      password: "",
+    })
+  
+    const {name, email, password} = data
+  
+    const handleChange = (e) => {
+      setData({...data, [e.target.name] : e.target.value})
+    }
+  
+  
+    
+    const handleSubmit = async (e) => {
+      if (data.name === "" || data.email === "" || data.password=== "") {
+        alert("Please Enter A Valid Input")
+        }
+  
+  
+      
+      e.preventDefault()
+  
+      try {
+        await axios.post("/register", {
+          name, email, password
+        },
+  
+        {headers : {"Content-Type" : "application/json",'Access-Control-Allow-Origin': '*' }}
+        
+        )
+  
+        navigate("/login")
+      }
+  
+      catch(err) {
+        console.log(err)
+      }
+    }
     return (
         <div className="container101">
 
