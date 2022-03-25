@@ -1,14 +1,13 @@
- 
-body {
-    background-color: white;
-}
-
+ .container101 {
+     background-color: white;
+     height: 100vh;
+ }
 
 .container2 {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     place-items: center;
-    margin-top: 200px !important;
+    padding-top: 200px !important;
     width: 70%;    
     margin:10px auto;
 }
@@ -132,7 +131,7 @@ body {
      font-size: 1.1em;
      margin-bottom: -3px;
  }
-
+ 
  .sub {
     background: #090;
     color: #fff;
@@ -160,11 +159,11 @@ body {
  @media screen and (max-width:700px) {
     .container2 {
         grid-template-columns: repeat(1, 1fr);
-        margin-top: 120px;
+        padding-top: 90px !important;
     }
     .box10 {
         order: 2;
-        margin-top: 50px;
+        padding-top: 50px;
     }
 
     .box12 {
