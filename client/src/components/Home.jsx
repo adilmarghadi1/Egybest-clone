@@ -8,12 +8,11 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { AiFillTwitterSquare } from "react-icons/ai";
 import Navbar from './Navbar';
 // Import Swiper styles
+
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 
-
-// import required modules
 import { Pagination, Navigation } from "swiper";
 
 function Home() {
@@ -129,7 +128,7 @@ function Home() {
                     <Swiper
         slidesPerView={5}
         spaceBetween={30}
-        slidesPerGroup={3}
+        slidesPerGroup={2}
         loop={true}
         loopFillGroupWithBlank={true}
         pagination={{
@@ -457,14 +456,8 @@ function Home() {
             </div>
         </SwiperSlide>
       </Swiper>
-                    
-                      
                 </div>
             </div>
-
-            
-
-
             <div className='right1'>
                 <div className='box7'>
                     <h2> ايجي بست</h2>
