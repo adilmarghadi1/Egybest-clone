@@ -1,13 +1,49 @@
-import React from "react"
+import React, {useState} from "react"
 import { AiOutlineGooglePlus } from "react-icons/ai";
 import { AiFillFacebook } from "react-icons/ai";
 import { FaUserAlt } from "react-icons/fa";
 import { BiMale } from "react-icons/bi";
 import { FaFemale } from "react-icons/fa";
-import { Link} from 'react-router-dom'
+import {BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom'
+import axios from 'axios'
+import { useNavigate } from 'react-router-dom';
+
 
 import './Register.css'
 function Login() {
+
+    let navigate = useNavigate();
+
+  const [data, setData] = useState({    
+    email: "",
+    password: "",
+  })
+
+  const { email, password } = data
+
+  const handleChange = (e)  => {
+     setData({ ...data, [e.target.name]: e.target.value })
+     
+  }
+  const handleSubmit = async (e) => {
+    if (data.email === "" ||data.password=== "") {
+      alert("Please Enter A Valid Input")
+      }
+    e.preventDefault()
+
+
+    try {
+      const res = await axios.post(
+        "/login",
+        { email, password },
+        { headers: { "Content-Type": "application/json" } }
+      )
+      localStorage.setItem("token", res.data.token)
+      navigate("/")
+    } catch (err) {
+      console.log(err)
+    }
+  }
     return (
         <div className="container101">
 
@@ -23,11 +59,11 @@ function Login() {
             </div>
 
             <div className="box12">
-                <form>
+            <form onSubmit={handleSubmit}> 
                     <h1><FaUserAlt className="user2"/>  Sign in to your Account</h1>
                     
-                    <input type="email" placeholder="Email Or Username" required className="first11"/>
-                    <input type="password" placeholder="New Password" className="first11"/>
+                    <input type="email" name='email' value={email} onChange={handleChange} placeholder="Email Or Username" required className="first11"/>
+                    <input type="password" name="password" value={password} onChange={handleChange}placeholder="New Password" className="first11"/>
                      
                     <button className="sub">Sign In</button>
                     <p className="para">Create a new Account ?<Link to='/register'>Sign Up</Link></p>
