@@ -128,7 +128,7 @@ function Home() {
                     <Swiper
         slidesPerView={5}
         spaceBetween={30}
-        slidesPerGroup={3}
+        slidesPerGroup={2}
         loop={true}
         loopFillGroupWithBlank={true}
         pagination={{
@@ -456,14 +456,8 @@ function Home() {
             </div>
         </SwiperSlide>
       </Swiper>
-                    
-                      
                 </div>
             </div>
-
-            
-
-
             <div className='right1'>
                 <div className='box7'>
                     <h2> ايجي بست</h2>
