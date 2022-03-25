@@ -7,7 +7,7 @@ import { FaFemale } from "react-icons/fa";
 import { Link} from 'react-router-dom'
 
 import './Register.css'
-function Login() {
+function Register() {
     return (
         <div className="container101">
 
@@ -45,4 +45,4 @@ function Login() {
     )
 }
 
-export default Login
+export default Register
