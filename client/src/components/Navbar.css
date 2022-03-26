@@ -99,6 +99,20 @@
     margin-top: -2px;
 }
 
+
+.img01 {
+    width: 37px;
+    height: 37px;
+    border-radius: 50%;
+    margin-left: 20px;
+    margin-top: -5px !important;
+}
+
+.img02 {
+    color: rgb(65, 61, 54);
+    margin-top: 40px !important;
+    cursor: pointer;
+}
 .search2{
     display: none;
 }

@@ -4,7 +4,7 @@ import { FaUserAlt } from 'react-icons/fa';
 import { BsSearch } from "react-icons/bs";
 import {BrowserRouter as Router, Routes, Route, Link, useNavigate} from 'react-router-dom'
 import Home from './Home'
-
+import prs from '../images/person.jpg'
 import Login from './Login'
 import Register from './Register'
 import './Navbar.css'
@@ -34,12 +34,13 @@ function Navbar() {
                          <BsSearch className='search2 '/>
                          <input type="text" className="search-click" name="" placeholder="search here..." />
                              <li className='nav-item'>
-                                 <Link to='/login' className='nav-link first' >تسجيل الدخول</Link>
+                                 
+                                 {localStorage.getItem("token") ?  <a onClick={Logout} className='img02'>Logout</a> :  <Link to='/login' className='nav-link first' >تسجيل الدخول</Link>}
                              </li>
  
                              <li className='nav-item'>
 
-                    {localStorage.getItem("token") ? <a onClick={Logout}>Logout</a>  : <Link to='/register' className='nav-link second' > اشترك مجاناً <FaUserAlt className='user1'/></Link>}
+                    {localStorage.getItem("token") ? <img className='img01' src={prs} alt='person' />   : <Link to='/register' className='nav-link second' > اشترك مجاناً <FaUserAlt className='user1'/></Link>}
                                  
                              </li>
                             
