@@ -28,7 +28,6 @@ function Navbar() {
 
                 <nav className='navbar'>
                 <ul className="nav-menu">
-                   
                          
                          <div className='left'>
                          <BsSearch className='search2 '/>
