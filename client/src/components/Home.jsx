@@ -134,6 +134,54 @@ async function createVideoCards2(videoItems) {
 
 }
 
+
+//Third
+
+const [videoCards3, setVideoCards3] = useState([]);
+
+
+
+useEffect(() => {
+ axios.get(`https://www.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=12&regionCode=FR&key=AIzaSyAua-uH4IjEWSCVUIYjFbpn1OLJZ_VtJvw`)
+   .then(response => {
+     console.log(response.data.items)
+     createVideoCards3(response.data.items);
+   })
+   .catch(error => {
+     console.log(error);
+   })
+}, [])
+
+
+
+async function createVideoCards3(videoItems) {
+ let newVideoCards3 = [];
+ for (const video of videoItems) {
+   const videoId = video.id;
+   const snippet = video.snippet;
+   const channelId = snippet.channelId;
+
+   const response = await axios
+                         .get(`https://www.googleapis.com/youtube/v3/channels?part=snippet&id=${channelId}&key=AIzaSyAua-uH4IjEWSCVUIYjFbpn1OLJZ_VtJvw`)
+   const channelImage = response.data.items[0].snippet.thumbnails.medium.url;
+   const title3 = snippet.title;
+     
+   const image3 = snippet.thumbnails.medium.url;
+   const views = video.statistics.viewCount;
+   const channel = snippet.channelTitle;
+
+   newVideoCards3.push({
+     videoId,
+     image3,
+     title3,
+     channel,
+     views,
+     channelImage
+   });
+ };
+ setVideoCards3(newVideoCards3);
+
+}
    
 
     return (
@@ -315,11 +363,11 @@ async function createVideoCards2(videoItems) {
         modules={[Pagination, Navigation]}
         className="mySwiper"
       >
-       { videoCards.map(item => (
+       { videoCards3.map(item => (
         <SwiperSlide>
             <div className='box5'>
-            <img src={item.image} className='img1' alt='image' />
-            <p>{item.title}</p>
+            <img src={item.image3} className='img1' alt='image' />
+            <p>{item.title3}</p>
             </div>
         </SwiperSlide>
           ))}
