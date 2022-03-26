@@ -39,14 +39,63 @@ function Home() {
 
  
 
+const [videoCards, setVideoCards] = useState([]);
+const [inputSearch, setInputSearch] = useState('');
+
+
+
+useEffect(() => {
+ axios.get(`https://www.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=12&regionCode=MA&key=AIzaSyAua-uH4IjEWSCVUIYjFbpn1OLJZ_VtJvw`)
+   .then(response => {
+     console.log(response.data.items)
+     createVideoCards(response.data.items);
+   })
+   .catch(error => {
+     console.log(error);
+   })
+}, [])
+
+
+
+async function createVideoCards(videoItems) {
+ let newVideoCards = [];
+ for (const video of videoItems) {
+   const videoId = video.id;
+   const snippet = video.snippet;
+   const channelId = snippet.channelId;
+
+   const response = await axios
+                         .get(`https://www.googleapis.com/youtube/v3/channels?part=snippet&id=${channelId}&key=AIzaSyAua-uH4IjEWSCVUIYjFbpn1OLJZ_VtJvw`)
+   const channelImage = response.data.items[0].snippet.thumbnails.medium.url;
+   const title = snippet.title;
+     
+   const image = snippet.thumbnails.medium.url;
+   const views = video.statistics.viewCount;
+   const channel = snippet.channelTitle;
+
+   newVideoCards.push({
+     videoId,
+     image,
+     title,
+     channel,
+     views,
+     channelImage
+   });
+ };
+ setVideoCards(newVideoCards);
+
+}
+
    
 
     return (
         <div>
             <Navbar />
+            
         <div className="container1">
              
             {/* Left  */}
+           
 
             <div className='left'>
                 <div className='box11'> 
@@ -126,6 +175,7 @@ function Home() {
             </div>
 
             <div className='center'>
+                
                 <div className='box3'>
                     <h1>مرحباً بكم في موقع ايجي بست الاصلي</h1>
                 </div>
@@ -148,68 +198,15 @@ function Home() {
         modules={[Pagination, Navigation]}
         className="mySwiper"
       >
+          { videoCards.map(item => (
         <SwiperSlide>
             <div className='box5'>
-            <img src={img1} className='img1' alt='image' />
-            <p>Titanic</p>
+            <img src={item.image} className='img1' alt='image' />
+            <p>{item.title}</p>
             </div>
         </SwiperSlide>
-
-       <SwiperSlide>
-            <div className='box5'>
-            <img src={img1} className='img1' alt='image' />
-            <p>Titanic</p>
-            </div>
-        </SwiperSlide>
-
-       <SwiperSlide>
-            <div className='box5'>
-            <img src={img1} className='img1' alt='image' />
-            <p>Titanic</p>
-            </div>
-        </SwiperSlide>
-
-         <SwiperSlide>
-            <div className='box5'>
-            <img src={img1} className='img1' alt='image' />
-            <p>Titanic</p>
-            </div>
-        </SwiperSlide>
-
-         <SwiperSlide>
-            <div className='box5'>
-            <img src={img1} className='img1' alt='image' />
-            <p>Titanic</p>
-            </div>
-        </SwiperSlide>
-        <SwiperSlide>
-            <div className='box5'>
-            <img src={img1} className='img1' alt='image' />
-            <p>Titanic</p>
-            </div>
-        </SwiperSlide>
-
-        <SwiperSlide>
-            <div className='box5'>
-            <img src={img1} className='img1' alt='image' />
-            <p>Titanic</p>
-            </div>
-        </SwiperSlide>
-
-        
-          <SwiperSlide>
-            <div className='box5'>
-            <img src={img1} className='img1' alt='image' />
-            <p>Titanic</p>
-            </div>
-
-        </SwiperSlide>
-         <SwiperSlide>
-            <div className='box5'>
-            <img src={img1} className='img1' alt='image' />
-            <p>Titanic</p>
-            </div>
-        </SwiperSlide>
+          ))}
+      
       </Swiper>
                     
                       
