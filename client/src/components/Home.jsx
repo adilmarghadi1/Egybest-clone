@@ -40,7 +40,6 @@ function Home() {
  
 
 const [videoCards, setVideoCards] = useState([]);
-const [inputSearch, setInputSearch] = useState('');
 
 
 
@@ -232,65 +231,16 @@ async function createVideoCards(videoItems) {
         modules={[Pagination, Navigation]}
         className="mySwiper"
       >
+      { videoCards.map(item => (
         <SwiperSlide>
             <div className='box5'>
-            <img src={img1} className='img1' alt='image' />
-            <p>Titanic</p>
+            <img src={item.image} className='img1' alt='image' />
+            <p>{item.title}</p>
             </div>
         </SwiperSlide>
+          ))}
 
-       <SwiperSlide>
-            <div className='box5'>
-            <img src={img1} className='img1' alt='image' />
-            <p>Titanic</p>
-            </div>
-        </SwiperSlide>
-
-       <SwiperSlide>
-            <div className='box5'>
-            <img src={img1} className='img1' alt='image' />
-            <p>Titanic</p>
-            </div>
-        </SwiperSlide>
-
-         <SwiperSlide>
-            <div className='box5'>
-            <img src={img1} className='img1' alt='image' />
-            <p>Titanic</p>
-            </div>
-        </SwiperSlide>
-        <SwiperSlide>
-            <div className='box5'>
-            <img src={img1} className='img1' alt='image' />
-            <p>Titanic</p>
-            </div>
-        </SwiperSlide>
-         <SwiperSlide>
-            <div className='box5'>
-            <img src={img1} className='img1' alt='image' />
-            <p>Titanic</p>
-            </div>
-        </SwiperSlide>
-         <SwiperSlide>
-            <div className='box5'>
-            <img src={img1} className='img1' alt='image' />
-            <p>Titanic</p>
-            </div>
-        </SwiperSlide>
-
-          <SwiperSlide>
-            <div className='box5'>
-            <img src={img1} className='img1' alt='image' />
-            <p>Titanic</p>
-            </div>
-
-        </SwiperSlide>
-         <SwiperSlide>
-            <div className='box5'>
-            <img src={img1} className='img1' alt='image' />
-            <p>Titanic</p>
-            </div>
-        </SwiperSlide>
+       
       </Swiper>
                     
                       
@@ -316,65 +266,16 @@ async function createVideoCards(videoItems) {
         modules={[Pagination, Navigation]}
         className="mySwiper"
       >
+       { videoCards.map(item => (
         <SwiperSlide>
             <div className='box5'>
-            <img src={img1} className='img1' alt='image' />
-            <p>Titanic</p>
+            <img src={item.image} className='img1' alt='image' />
+            <p>{item.title}</p>
             </div>
         </SwiperSlide>
+          ))}
 
-       <SwiperSlide>
-            <div className='box5'>
-            <img src={img1} className='img1' alt='image' />
-            <p>Titanic</p>
-            </div>
-        </SwiperSlide>
-
-       <SwiperSlide>
-            <div className='box5'>
-            <img src={img1} className='img1' alt='image' />
-            <p>Titanic</p>
-            </div>
-        </SwiperSlide>
-
-         <SwiperSlide>
-            <div className='box5'>
-            <img src={img1} className='img1' alt='image' />
-            <p>Titanic</p>
-            </div>
-        </SwiperSlide>
-
-         <SwiperSlide>
-            <div className='box5'>
-            <img src={img1} className='img1' alt='image' />
-            <p>Titanic</p>
-            </div>
-        </SwiperSlide>
-        <SwiperSlide>
-            <div className='box5'>
-            <img src={img1} className='img1' alt='image' />
-            <p>Titanic</p>
-            </div>
-        </SwiperSlide>
-        <SwiperSlide>
-            <div className='box5'>
-            <img src={img1} className='img1' alt='image' />
-            <p>Titanic</p>
-            </div>
-        </SwiperSlide>
-          <SwiperSlide>
-            <div className='box5'>
-            <img src={img1} className='img1' alt='image' />
-            <p>Titanic</p>
-            </div>
-
-        </SwiperSlide>
-         <SwiperSlide>
-            <div className='box5'>
-            <img src={img1} className='img1' alt='image' />
-            <p>Titanic</p>
-            </div>
-        </SwiperSlide>
+       
       </Swiper>
                     
                       
@@ -400,68 +301,16 @@ async function createVideoCards(videoItems) {
         modules={[Pagination, Navigation]}
         className="mySwiper"
       >
+      { videoCards.map(item => (
         <SwiperSlide>
             <div className='box5'>
-            <img src={img1} className='img1' alt='image' />
-            <p>Titanic</p>
+            <img src={item.image} className='img1' alt='image' />
+            <p>{item.title}</p>
             </div>
         </SwiperSlide>
+          ))}
 
-       <SwiperSlide>
-            <div className='box5'>
-            <img src={img1} className='img1' alt='image' />
-            <p>Titanic</p>
-            </div>
-        </SwiperSlide>
-
-       <SwiperSlide>
-            <div className='box5'>
-            <img src={img1} className='img1' alt='image' />
-            <p>Titanic</p>
-            </div>
-        </SwiperSlide>
-
-        <SwiperSlide>
-            <div className='box5'>
-            <img src={img1} className='img1' alt='image' />
-            <p>Titanic</p>
-            </div>
-        </SwiperSlide>
-
-        <SwiperSlide>
-            <div className='box5'>
-            <img src={img1} className='img1' alt='image' />
-            <p>Titanic</p>
-            </div>
-        </SwiperSlide>
-
-         <SwiperSlide>
-            <div className='box5'>
-            <img src={img1} className='img1' alt='image' />
-            <p>Titanic</p>
-            </div>
-        </SwiperSlide>
-
-         <SwiperSlide>
-            <div className='box5'>
-            <img src={img1} className='img1' alt='image' />
-            <p>Titanic</p>
-            </div>
-        </SwiperSlide>
-
-          <SwiperSlide>
-            <div className='box5'>
-            <img src={img1} className='img1' alt='image' />
-            <p>Titanic</p>
-            </div>
-
-        </SwiperSlide>
-         <SwiperSlide>
-            <div className='box5' >
-            <img src={img1} className='img1' alt='image' />
-            <p>Titanic</p>
-            </div>
-        </SwiperSlide>
+      
       </Swiper>
                 </div>
             </div>
