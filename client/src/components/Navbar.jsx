@@ -13,6 +13,9 @@ import './Navbar.css'
 function Navbar() {
     
     let navigate = useNavigate();
+
+ 
+   
    function Logout(){
     localStorage.removeItem("token")
       navigate('/login')
@@ -25,7 +28,6 @@ function Navbar() {
 
                 <nav className='navbar'>
                 <ul className="nav-menu">
-                <a onClick={Logout}>Logout</a>  
                    
                          
                          <div className='left'>
@@ -36,7 +38,9 @@ function Navbar() {
                              </li>
  
                              <li className='nav-item'>
-                                 <Link to='/register' className='nav-link second' > اشترك مجاناً <FaUserAlt className='user1'/></Link>
+
+                    {localStorage.getItem("token") ? <a onClick={Logout}>Logout</a>  : <Link to='/register' className='nav-link second' > اشترك مجاناً <FaUserAlt className='user1'/></Link>}
+                                 
                              </li>
                             
                          </div>
