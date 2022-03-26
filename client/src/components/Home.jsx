@@ -183,8 +183,6 @@ async function createVideoCards3(videoItems) {
 
 }
 
-
-
 //Fourth
 
 const [videoCards4, setVideoCards4] = useState([]);
