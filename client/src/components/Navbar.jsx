@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import egybestlogo from '../images/egybest_logo.png'
 import { FaUserAlt } from 'react-icons/fa';
 import { BsSearch } from "react-icons/bs";
@@ -11,6 +11,7 @@ import './Navbar.css'
  
 
 function Navbar() {
+    
     let navigate = useNavigate();
    function Logout(){
     localStorage.removeItem("token")
@@ -24,7 +25,8 @@ function Navbar() {
 
                 <nav className='navbar'>
                 <ul className="nav-menu">
-                   <a onClick={Logout}>Logout</a>
+                <a onClick={Logout}>Logout</a>  
+                   
                          
                          <div className='left'>
                          <BsSearch className='search2 '/>

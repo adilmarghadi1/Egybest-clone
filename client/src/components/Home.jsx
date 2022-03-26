@@ -30,12 +30,12 @@ function Home() {
     setUser(res.data)
   }
 
-  useEffect(() => {
-    getUser()
-    if (!localStorage.getItem("token")) {
-      navigate("/login")
-    }
-  }, [])
+//   useEffect(() => {
+//     getUser()
+//     if (!localStorage.getItem("token")) {
+//       navigate("/login")
+//     }
+//   }, [])
 
  
 
