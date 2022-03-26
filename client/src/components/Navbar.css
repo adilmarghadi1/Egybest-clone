@@ -230,3 +230,26 @@
         width: 140px;
     }
 }
+
+
+@media screen and (max-width:456px) {
+    .img01 {
+        display: none;
+        margin-left: 2px;
+    }
+
+
+
+
+}
+
+@media screen and (max-width:336px) {
+    .img02 {
+       font-size: 13px !important;
+       margin-left: 0px;
+    }
+
+
+
+
+}

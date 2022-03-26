@@ -56,7 +56,6 @@ function Home() {
             <div className='left'>
                 <div className='box11'> 
                 <div className='box1'>
-
                     <h1>تابع ايجي بست</h1>
                     <div className='links'>
                     <a href="">EgyBestOriginal</a>

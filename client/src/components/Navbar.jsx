@@ -48,7 +48,6 @@ function Navbar() {
                 </ul>
                 <ul className="nav-menu">
                          
-                        
 
                         <div className='right'>
                             <li className='nav-item'>
