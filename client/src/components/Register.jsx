@@ -4,7 +4,7 @@ import { AiFillFacebook } from "react-icons/ai";
 import { FaUserAlt } from "react-icons/fa";
 import { BiMale } from "react-icons/bi";
 import { FaFemale } from "react-icons/fa";
-import {BrowserRouter as Router, Routes, Route, Link, useNavigate, Navigate} from 'react-router-dom'
+import {BrowserRouter as Router, Routes, Route, Link, useNavigate} from 'react-router-dom'
 
 import axios from 'axios'
 import './Register.css'
