@@ -18,7 +18,7 @@ function Navbar() {
    
    function Logout(){
     localStorage.removeItem("token")
-      navigate('/login')
+      navigate('/')
 
   }
        
@@ -41,7 +41,7 @@ function Navbar() {
                              <li className='nav-item'>
 
                     {localStorage.getItem("token") ? <img className='img01' src={prs} alt='person' />   : <Link to='/register' className='nav-link second' > اشترك مجاناً <FaUserAlt className='user1'/></Link>}
-                                 
+                               
                              </li>
                             
                          </div>

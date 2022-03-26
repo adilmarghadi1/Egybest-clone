@@ -38,12 +38,7 @@ function Home() {
 //   }, [])
 
  
-
- function Logout(){
-    localStorage.removeItem("token")
-     navigate("/login")
-
-  }
+ 
    
 
     return (
