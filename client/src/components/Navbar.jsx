@@ -1,20 +1,30 @@
-import React, { useState } from 'react'
+import React from 'react'
 import egybestlogo from '../images/egybest_logo.png'
 import { FaUserAlt } from 'react-icons/fa';
 import { BsSearch } from "react-icons/bs";
-import {BrowserRouter as Router, Routes, Route, Link} from 'react-router-dom'
+import {BrowserRouter as Router, Routes, Route, Link, useNavigate} from 'react-router-dom'
 import Home from './Home'
+
 import Login from './Login'
 import Register from './Register'
 import './Navbar.css'
-function Navbar(props) {
+ 
+
+function Navbar() {
+    let navigate = useNavigate();
+   function Logout(){
+    localStorage.removeItem("token")
+      navigate('/login')
+
+  }
+       
     return (
         <div>
-            <Router>
                 <header className='header1'>
 
                 <nav className='navbar'>
                 <ul className="nav-menu">
+                   <a onClick={Logout}>Logout</a>
                          
                          <div className='left'>
                          <BsSearch className='search2 '/>
@@ -26,6 +36,7 @@ function Navbar(props) {
                              <li className='nav-item'>
                                  <Link to='/register' className='nav-link second' > اشترك مجاناً <FaUserAlt className='user1'/></Link>
                              </li>
+                            
                          </div>
                 </ul>
                 <ul className="nav-menu">
@@ -50,13 +61,8 @@ function Navbar(props) {
                      
                 </nav>
                 </header>
-                <Routes>
-              <Route path='/'  element={<Home />} />
-              <Route path='/login' element={<Login />} />
-              <Route path='/register' element={<Register />} />
-        </Routes>
+            
                 
-            </Router>
         </div>
     )
 }

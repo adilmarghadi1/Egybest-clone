@@ -9,14 +9,15 @@ import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 
 function App() {
   return (
-    <div>
-      <Navbar />
+    
+      <div>
+     
     <Router>
-      {/* <Routes>
+      <Routes>
               <Route path='/'  element={<Home />} />
               <Route path='/login' element={<Login />} />
               <Route path='/register' element={<Register />} />
-        </Routes> */}
+        </Routes>
       </Router>
     </div>
     );

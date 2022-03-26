@@ -2,38 +2,53 @@ import './Home.css'
 import { AiFillFacebook } from "react-icons/ai";
 import { FaTwitterSquare } from "react-icons/fa";
 import img1 from '../images/img1.jpg'
-import React, { useRef, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
 import { AiFillTwitterSquare } from "react-icons/ai";
 import Navbar from './Navbar';
 // Import Swiper styles
+import { useNavigate } from 'react-router-dom';
+import React, { useEffect, useState } from "react"
 
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-
+import axios from 'axios'
 import { Pagination, Navigation } from "swiper";
-
 function Home() {
-    const [movies, setMovies] = useState([]);
-    
-    const searchMovies = async (e) => {
-        e.preventDefault();
-                
-        const url = `https://api.themoviedb.org/3/trending/all/day?api_key=5dcf7f28a88be0edc01bbbde06f024ab`;
-        
-        try {
-            const res = await fetch(url);
-            const data  = await res.json();
-            setMovies(data.results);
-            console.log(data)
-        }catch(err){
-            console.error(err);
-        }
+     
+    let navigate = useNavigate();
+  
+  const [user, setUser] = useState(null)
+
+  const getUser = async () => {
+    const res = await axios.get("/", {
+      headers: {
+        Authorization: `Bearer ${localStorage.getItem("token")}`,
+      },
+    })
+    setUser(res.data)
+  }
+
+  useEffect(() => {
+    getUser()
+    if (!localStorage.getItem("token")) {
+      navigate("/login")
     }
+  }, [])
+
+ 
+
+ function Logout(){
+    localStorage.removeItem("token")
+     navigate("/login")
+
+  }
+   
 
     return (
+        <div>
+            <Navbar />
         <div className="container1">
              
             {/* Left  */}
@@ -41,6 +56,7 @@ function Home() {
             <div className='left'>
                 <div className='box11'> 
                 <div className='box1'>
+
                     <h1>تابع ايجي بست</h1>
                     <div className='links'>
                     <a href="">EgyBestOriginal</a>
@@ -473,6 +489,7 @@ function Home() {
             <AiFillFacebook className='fb' />
             <AiFillTwitterSquare className='tw' />
         </div> 
+        </div>
     )
 }
 
