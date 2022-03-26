@@ -44,7 +44,7 @@ const [videoCards, setVideoCards] = useState([]);
 
 
 useEffect(() => {
- axios.get(`https://www.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=12&regionCode=MA&key=AIzaSyAua-uH4IjEWSCVUIYjFbpn1OLJZ_VtJvw`)
+ axios.get(`https://www.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=12&regionCode=US&key=AIzaSyAua-uH4IjEWSCVUIYjFbpn1OLJZ_VtJvw`)
    .then(response => {
      console.log(response.data.items)
      createVideoCards(response.data.items);
@@ -82,6 +82,55 @@ async function createVideoCards(videoItems) {
    });
  };
  setVideoCards(newVideoCards);
+
+}
+ 
+
+// Second
+
+const [videoCards2, setVideoCards2] = useState([]);
+
+
+
+useEffect(() => {
+ axios.get(`https://www.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&chart=mostPopular&maxResults=12&regionCode=MA&key=AIzaSyAua-uH4IjEWSCVUIYjFbpn1OLJZ_VtJvw`)
+   .then(response => {
+     console.log(response.data.items)
+     createVideoCards2(response.data.items);
+   })
+   .catch(error => {
+     console.log(error);
+   })
+}, [])
+
+
+
+async function createVideoCards2(videoItems) {
+ let newVideoCards2 = [];
+ for (const video of videoItems) {
+   const videoId = video.id;
+   const snippet = video.snippet;
+   const channelId = snippet.channelId;
+
+   const response = await axios
+                         .get(`https://www.googleapis.com/youtube/v3/channels?part=snippet&id=${channelId}&key=AIzaSyAua-uH4IjEWSCVUIYjFbpn1OLJZ_VtJvw`)
+   const channelImage = response.data.items[0].snippet.thumbnails.medium.url;
+   const title2 = snippet.title;
+     
+   const image2 = snippet.thumbnails.medium.url;
+   const views = video.statistics.viewCount;
+   const channel = snippet.channelTitle;
+
+   newVideoCards2.push({
+     videoId,
+     image2,
+     title2,
+     channel,
+     views,
+     channelImage
+   });
+ };
+ setVideoCards2(newVideoCards2);
 
 }
 
@@ -231,11 +280,11 @@ async function createVideoCards(videoItems) {
         modules={[Pagination, Navigation]}
         className="mySwiper"
       >
-      { videoCards.map(item => (
+      { videoCards2.map(item => (
         <SwiperSlide>
             <div className='box5'>
-            <img src={item.image} className='img1' alt='image' />
-            <p>{item.title}</p>
+            <img src={item.image2} className='img1' alt='image' />
+            <p>{item.title2}</p>
             </div>
         </SwiperSlide>
           ))}
